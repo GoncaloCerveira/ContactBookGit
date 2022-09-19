@@ -61,6 +61,7 @@ public class Main {
                 case LOOKUP_PHONE_NUMBER:
                     break;
                 case EXISTS_PHONE_NUMBER:
+
                     break;
                 default:
                     System.out.println(COMMAND_ERROR);
