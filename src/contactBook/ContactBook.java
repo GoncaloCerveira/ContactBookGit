@@ -77,11 +77,6 @@ public class ContactBook {
         return name;
     }
 
-    /**
-     *
-     * @param name
-     * @return
-     */
     private int searchIndex(String name) {
         int i = 0;
         int result = -1;
