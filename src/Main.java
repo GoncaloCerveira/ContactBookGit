@@ -62,7 +62,7 @@ public class Main {
                     searchContact(in, cBook);
                     break;
                 case EXISTS_PHONE_NUMBER:
-
+                    checkIfContactsHaveDiffPhone(cBook);
                     break;
                 default:
                     System.out.println(COMMAND_ERROR);
@@ -166,5 +166,13 @@ public class Main {
             System.out.println(name);
         else
             System.out.println(CONTACT_NOT_MATCH);
+    }
+
+    private static void checkIfContactsHaveDiffPhone(ContactBook cBook){
+        boolean checkIfAreEqual = cBook.checkIfAreEqual();
+        if(checkIfAreEqual)
+            System.out.println(SAME_PHONE_NUMBERS);
+        else
+            System.out.println(DIFFERENT_PHONE_NUMBERS);
     }
 }
