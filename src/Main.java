@@ -147,6 +147,10 @@ public class Main {
         else System.out.println(NAME_NOT_EXIST);
     }
 
+    /**
+     *
+     * @param cBook
+     */
     private static void listAllContacts(ContactBook cBook) {
         if (cBook.getNumberOfContacts() != 0) {
             cBook.initializeIterator();
