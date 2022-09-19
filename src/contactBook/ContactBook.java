@@ -62,6 +62,11 @@ public class ContactBook {
         contacts[searchIndex(name)].setEmail(email);
     }
 
+    /**
+     * Cerveira
+     * @param phone
+     * @return
+     */
     public String getContact(int phone) {
         int i = 0;
         String name= "";
