@@ -115,4 +115,14 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public boolean checkIfAreEqual(){
+        for(Contact c1 : contacts ){  //percorre todos os contactos
+            for(Contact c2 : contacts){ //compara os com todos os outros contactos
+                if(!(c1.getName().equals(c2.getName()))) //se existir um contacto que seja diferente desse mesmo
+                    if(c1.getPhone() == c2.getPhone()) //ve se tem numeros iguais
+                        return true;
+            }
+        }
+        return false;
+    }
 }

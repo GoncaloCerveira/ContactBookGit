@@ -59,9 +59,9 @@ public class Main {
                     listAllContacts(cBook);
                     break;
                 case LOOKUP_PHONE_NUMBER:
-                    searchContact(in, cBook);
                     break;
                 case EXISTS_PHONE_NUMBER:
+
                     break;
                 default:
                     System.out.println(COMMAND_ERROR);
@@ -161,14 +161,4 @@ public class Main {
         }
         else System.out.println(BOOK_EMPTY);
     }
-
-    private static void searchContact(Scanner in, ContactBook cBook) {
-        int phone = in.nextInt(); in.nextLine();
-        String name = cBook.getContact(phone);
-        if(!name.equals(""))
-            System.out.println(name);
-        else
-            System.out.println(CONTACT_NOT_MATCH);
-    }
-
 }
