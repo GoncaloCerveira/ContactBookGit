@@ -2,6 +2,8 @@ package contactBook;
 
 import contactBook.Contact;
 
+import java.util.Iterator;
+
 public class ContactBook {
     static final int DEFAULT_SIZE = 100;
 
@@ -58,6 +60,21 @@ public class ContactBook {
     //Pre: name != null && hasContact(name)
     public void setEmail(String name, String email) {
         contacts[searchIndex(name)].setEmail(email);
+    }
+
+    public String getContact(int phone) {
+        int i = 0;
+        String name= "";
+        boolean found = false;
+        while(i<counter && !found){
+            if(contacts[i].getPhone() == phone){
+                name = contacts[i].getName();
+                found = true;
+            }
+            else
+                i++;
+        }
+        return name;
     }
 
     private int searchIndex(String name) {

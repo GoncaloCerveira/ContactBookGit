@@ -160,11 +160,11 @@ public class Main {
 
     private static void searchContact(Scanner in, ContactBook cBook) {
         int phone = in.nextInt(); in.nextLine();
-        String name = cBook.getContact();
+        String name = cBook.getContact(phone);
         if(!name.equals(""))
             System.out.println(name);
         else
-            System.out.println("Phone number does not exist.");
+            System.out.println(CONTACT_NOT_MATCH);
     }
 
 }
